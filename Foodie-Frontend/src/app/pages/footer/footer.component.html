@@ -1,0 +1,17 @@
+<div class="fixed bottom-0 left-0 w-full bg-gray-800 text-white p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-lg font-bold">Cart Summary</div>
+    <div class="flex space-x-4 items-center justify-center">
+      <div>Total Items: {{ items.length }}</div>
+      <div>Total Price: ₹{{ totalPrice }}</div>
+      <button
+        (click)="checkout()"
+        [disabled]="items.length === 0"
+        class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 cursor-pointer shadow-2xl"
+        [ngClass]="{'cursor-not-allowed opacity-50': items.length === 0}"
+      >
+        Checkout
+      </button>
+    </div>
+  </div>
+</div>

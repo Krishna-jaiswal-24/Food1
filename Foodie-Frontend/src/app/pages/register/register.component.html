@@ -1,0 +1,27 @@
+<div class="w-screen h-screen flex flex-col md:flex-row">
+  <div class="w-full md:w-1/2 h-1/2 md:h-full p-3">
+    <img src='https://images.pexels.com/photos/8478182/pexels-photo-8478182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' class="object-cover w-full h-full rounded-3xl" />
+  </div>
+
+  <div class="w-full md:w-1/2 flex items-center justify-center p-6">
+    <div class="w-full max-w-sm">
+      <h1 class="text-2xl font-bold mb-6">Welcome!</h1>
+      <p class="mb-4">Register</p>
+      <form>
+        <div class="mb-4">
+          <input type="text" placeholder="Name" [(ngModel)]="registerObj.name" class="w-full p-3 border rounded" name="name"/>
+        </div>
+        <div class="mb-4">
+          <input type="text" placeholder="Username" [(ngModel)]="registerObj.email" class="w-full p-3 border rounded" name="email"/>
+        </div>
+        <div class="mb-6">
+          <input type="password" placeholder="Password" [(ngModel)]="registerObj.password" class="w-full p-3 border rounded" name="password"/>
+        </div>
+        <div>
+          <button type="button" class="w-full p-3 bg-blue-500 text-white rounded" (click)="onRegister()">Register</button>
+        </div>
+      </form>
+      <p class="my-4">Already have an account? <span class="text-blue-500 cursor-pointer" (click)="redirectToLogin()">Login here!</span></p>
+    </div>
+  </div>
+</div>
